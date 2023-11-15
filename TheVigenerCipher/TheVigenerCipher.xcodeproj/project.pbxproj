@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		630454672ACC099F0006CEDB /* TheVigenerCipherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630454662ACC099F0006CEDB /* TheVigenerCipherApp.swift */; };
+		630454692ACC099F0006CEDB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630454682ACC099F0006CEDB /* MainView.swift */; };
+		6304546B2ACC09A00006CEDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6304546A2ACC09A00006CEDB /* Assets.xcassets */; };
+		6304546E2ACC09A00006CEDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6304546D2ACC09A00006CEDB /* Preview Assets.xcassets */; };
+		6304547B2ACC1A530006CEDB /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304547A2ACC1A530006CEDB /* MultilineTextField.swift */; };
+		6304547F2ACC1B580006CEDB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304547E2ACC1B580006CEDB /* MainViewModel.swift */; };
+		63488A0A2ACC640600925749 /* Ciepher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63488A092ACC640600925749 /* Ciepher.swift */; };
+		63D059E42ADFCA33007D7858 /* CrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D059E32ADFCA33007D7858 /* CrackView.swift */; };
+		63D059E62ADFCA71007D7858 /* LoadTxtFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D059E52ADFCA71007D7858 /* LoadTxtFile.swift */; };
+		63D059E82ADFCAA6007D7858 /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D059E72ADFCAA6007D7858 /* SecondViewModel.swift */; };
+		63D059EA2ADFCCAB007D7858 /* TabView_chose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D059E92ADFCCAB007D7858 /* TabView_chose.swift */; };
+		63D059EE2ADFCD80007D7858 /* CreateTextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D059ED2ADFCD80007D7858 /* CreateTextFile.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		630454632ACC099F0006CEDB /* TheVigenerCipher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheVigenerCipher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		630454662ACC099F0006CEDB /* TheVigenerCipherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheVigenerCipherApp.swift; sourceTree = "<group>"; };
+		630454682ACC099F0006CEDB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		6304546A2ACC09A00006CEDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6304546D2ACC09A00006CEDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6304547A2ACC1A530006CEDB /* MultilineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextField.swift; sourceTree = "<group>"; };
+		6304547E2ACC1B580006CEDB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		63488A092ACC640600925749 /* Ciepher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ciepher.swift; sourceTree = "<group>"; };
+		63D059E32ADFCA33007D7858 /* CrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrackView.swift; sourceTree = "<group>"; };
+		63D059E52ADFCA71007D7858 /* LoadTxtFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadTxtFile.swift; sourceTree = "<group>"; };
+		63D059E72ADFCAA6007D7858 /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
+		63D059E92ADFCCAB007D7858 /* TabView_chose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView_chose.swift; sourceTree = "<group>"; };
+		63D059ED2ADFCD80007D7858 /* CreateTextFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTextFile.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		630454602ACC099F0006CEDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6304545A2ACC099F0006CEDB = {
+			isa = PBXGroup;
+			children = (
+				630454652ACC099F0006CEDB /* TheVigenerCipher */,
+				630454642ACC099F0006CEDB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		630454642ACC099F0006CEDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				630454632ACC099F0006CEDB /* TheVigenerCipher.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		630454652ACC099F0006CEDB /* TheVigenerCipher */ = {
+			isa = PBXGroup;
+			children = (
+				630454662ACC099F0006CEDB /* TheVigenerCipherApp.swift */,
+				63D059E92ADFCCAB007D7858 /* TabView_chose.swift */,
+				630454682ACC099F0006CEDB /* MainView.swift */,
+				63D059E32ADFCA33007D7858 /* CrackView.swift */,
+				630454742ACC14030006CEDB /* View */,
+				630454752ACC140A0006CEDB /* ViewModel */,
+				630454762ACC14150006CEDB /* Model */,
+				6304546A2ACC09A00006CEDB /* Assets.xcassets */,
+				6304546C2ACC09A00006CEDB /* Preview Content */,
+			);
+			path = TheVigenerCipher;
+			sourceTree = "<group>";
+		};
+		6304546C2ACC09A00006CEDB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6304546D2ACC09A00006CEDB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		630454742ACC14030006CEDB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6304547A2ACC1A530006CEDB /* MultilineTextField.swift */,
+				63D059E52ADFCA71007D7858 /* LoadTxtFile.swift */,
+				63D059ED2ADFCD80007D7858 /* CreateTextFile.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		630454752ACC140A0006CEDB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6304547E2ACC1B580006CEDB /* MainViewModel.swift */,
+				63D059E72ADFCAA6007D7858 /* SecondViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		630454762ACC14150006CEDB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63488A092ACC640600925749 /* Ciepher.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		630454622ACC099F0006CEDB /* TheVigenerCipher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 630454712ACC09A00006CEDB /* Build configuration list for PBXNativeTarget "TheVigenerCipher" */;
+			buildPhases = (
+				6304545F2ACC099F0006CEDB /* Sources */,
+				630454602ACC099F0006CEDB /* Frameworks */,
+				630454612ACC099F0006CEDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TheVigenerCipher;
+			packageProductDependencies = (
+			);
+			productName = TheVigenerCipher;
+			productReference = 630454632ACC099F0006CEDB /* TheVigenerCipher.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6304545B2ACC099F0006CEDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					630454622ACC099F0006CEDB = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 6304545E2ACC099F0006CEDB /* Build configuration list for PBXProject "TheVigenerCipher" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6304545A2ACC099F0006CEDB;
+			packageReferences = (
+				630454772ACC176B0006CEDB /* XCRemoteSwiftPackageReference "Swift-BigInt" */,
+			);
+			productRefGroup = 630454642ACC099F0006CEDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				630454622ACC099F0006CEDB /* TheVigenerCipher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		630454612ACC099F0006CEDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6304546E2ACC09A00006CEDB /* Preview Assets.xcassets in Resources */,
+				6304546B2ACC09A00006CEDB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6304545F2ACC099F0006CEDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63D059EA2ADFCCAB007D7858 /* TabView_chose.swift in Sources */,
+				6304547B2ACC1A530006CEDB /* MultilineTextField.swift in Sources */,
+				63D059E82ADFCAA6007D7858 /* SecondViewModel.swift in Sources */,
+				630454692ACC099F0006CEDB /* MainView.swift in Sources */,
+				630454672ACC099F0006CEDB /* TheVigenerCipherApp.swift in Sources */,
+				63D059E62ADFCA71007D7858 /* LoadTxtFile.swift in Sources */,
+				63488A0A2ACC640600925749 /* Ciepher.swift in Sources */,
+				63D059E42ADFCA33007D7858 /* CrackView.swift in Sources */,
+				6304547F2ACC1B580006CEDB /* MainViewModel.swift in Sources */,
+				63D059EE2ADFCD80007D7858 /* CreateTextFile.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6304546F2ACC09A00006CEDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		630454702ACC09A00006CEDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		630454722ACC09A00006CEDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TheVigenerCipher/Preview Content\"";
+				DEVELOPMENT_TEAM = 944K4M9L9M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = learnSwiftLeetCode.TheVigenerCipher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		630454732ACC09A00006CEDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TheVigenerCipher/Preview Content\"";
+				DEVELOPMENT_TEAM = 944K4M9L9M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = learnSwiftLeetCode.TheVigenerCipher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6304545E2ACC099F0006CEDB /* Build configuration list for PBXProject "TheVigenerCipher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6304546F2ACC09A00006CEDB /* Debug */,
+				630454702ACC09A00006CEDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		630454712ACC09A00006CEDB /* Build configuration list for PBXNativeTarget "TheVigenerCipher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				630454722ACC09A00006CEDB /* Debug */,
+				630454732ACC09A00006CEDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		630454772ACC176B0006CEDB /* XCRemoteSwiftPackageReference "Swift-BigInt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mkrd/Swift-BigInt.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+	};
+	rootObject = 6304545B2ACC099F0006CEDB /* Project object */;
+}
