@@ -88,7 +88,7 @@ struct Third: View {
                     Spacer()
                     
                     Button {
-                        self.viewModel.cryptViewModel()
+                        self.viewModel.tryCrypt()
                     }
                     label: {
                             Text("Гамирование")
@@ -98,6 +98,22 @@ struct Third: View {
                                 .cornerRadius(4)
                     }
                     Spacer().frame(width: 16)
+                }
+                HStack {
+                    
+                    Spacer().frame(width: 16)
+                    
+                    Button {
+                        self.viewModel.clear()
+                    } label: {
+                        Text("Очистить")
+                            .foregroundColor(.red)
+                            .padding(.all, 8)
+                            .background(Color("gray"))
+                            .cornerRadius(4)
+                    }
+                    
+                    Spacer()
                 }
             }
 //            printResult

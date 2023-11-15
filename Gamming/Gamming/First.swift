@@ -100,7 +100,26 @@ struct First: View {
                     }
                     Spacer().frame(width: 16)
                 }
+                
+                HStack {
+                    
+                    Spacer().frame(width: 16)
+                    
+                    Button {
+                        self.viewModel.clear()
+                    } label: {
+                        Text("Очистить всё")
+                            .padding(.all, 8)
+                            .foregroundStyle(.red)
+                            .background(Color("gray"))
+                            .cornerRadius(4)
+                    }
+                    
+                    Spacer()
+                    
+                }
             }
+            
 //            printResult
             Group {
                 
@@ -127,22 +146,25 @@ struct First: View {
             
 //            uncrypt
             Group {
-                HStack {
-                    
-                    Spacer()
-                    
-                    Button {
-                        self.viewModel.unCrypt()
+                if self.viewModel.resultIsReady {
+                    HStack {
+                        
+                        Spacer()
+                        
+                        Button {
+                            self.viewModel.unCrypt()
+                        }
+                        label: {
+                                Text("Расшифровать")
+                                    .foregroundColor(.blue)
+                                    .padding(.all, 8)
+                                    .background(Color("gray"))
+                                    .cornerRadius(4)
+                        }
+                        Spacer().frame(width: 16)
                     }
-                    label: {
-                            Text("Расшифровать")
-                                .foregroundColor(.blue)
-                                .padding(.all, 8)
-                                .background(Color("gray"))
-                                .cornerRadius(4)
-                    }
-                    Spacer().frame(width: 16)
                 }
+                
             }
             Group {
                 

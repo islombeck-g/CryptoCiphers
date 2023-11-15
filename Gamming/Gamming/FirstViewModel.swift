@@ -12,7 +12,6 @@ final class FirstViewModel:ObservableObject {
     @Published var resultText = ""
     @Published var resultBinarText = ""
     
-    
     @Published var uncryptIsReady = false
     @Published var uncryptResultText = ""
     @Published var uncryptResultBinarText = ""
@@ -24,6 +23,22 @@ final class FirstViewModel:ObservableObject {
     
     var ciepher = Ciepher()
     
+    func clear() {
+        chosenLanguage = "EN"
+        textForCrypt = ""
+        binaryTextForCrypt = ""
+        keyForCrypt = ""
+        binaryKeyForCrypt = ""
+        resultIsReady = false
+        resultText = ""
+        resultBinarText = ""
+        uncryptIsReady = false
+        uncryptResultText = ""
+        uncryptResultBinarText = ""
+        error = ""
+        uncError = ""
+    }
+    
     func tryCrypt(){
         self.resultIsReady = false
         if checkDataForCrypt() {
@@ -33,7 +48,7 @@ final class FirstViewModel:ObservableObject {
         }
     }
     
-    func checkDataForCrypt() -> Bool{
+    private func checkDataForCrypt() -> Bool{
         guard self.textForCrypt != "" else {
             self.error = "Введите текст для шифрования"
             return false
@@ -42,10 +57,10 @@ final class FirstViewModel:ObservableObject {
             self.error = "Введите ключ для шифрования"
             return false
         }
-        if keyForCrypt.contains(" ") {
-            self.error = "Ключ не должен содержать пробелов"
-            return false
-        }
+//        if keyForCrypt.contains(" ") {
+//            self.error = "Ключ не должен содержать пробелов"
+//            return false
+//        }
         guard self.isTextInLanguage(self.textForCrypt, selectedLanguage: self.chosenLanguage) else {
             self.error = "Язык выбран другой, в слове обнаружены буквы из другого алфавита"
             return false
@@ -54,8 +69,11 @@ final class FirstViewModel:ObservableObject {
     }
     
     func unCrypt(){
+        
         self.uncryptIsReady = false
+        
         (self.uncryptResultText, self.uncryptResultBinarText) = ciepher.firstMUnCrypt(self.resultBinarText, keyForCrypt)
+        
         self.uncryptIsReady = true
     }
     func toBinar(){
@@ -74,5 +92,4 @@ final class FirstViewModel:ObservableObject {
             return false
         }
     }
-
 }

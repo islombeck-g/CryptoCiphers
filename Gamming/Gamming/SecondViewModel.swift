@@ -4,13 +4,12 @@ final class SecondViewModel:ObservableObject {
     @Published var chosenLanguage = "EN"
     @Published var textForCrypt = ""
     @Published var binaryTextForCrypt = ""
-    @Published var keyForCrypt = ""
+//    @Published var keyForCrypt = ""
     @Published var binaryKeyForCrypt = ""
     
     @Published var resultIsReady = false
     @Published var resultText = ""
     @Published var resultBinarText = ""
-    
     
     @Published var uncryptIsReady = false
     @Published var uncryptResultText = ""
@@ -24,33 +23,64 @@ final class SecondViewModel:ObservableObject {
     
     var ciepher = Ciepher()
     
-    func cryptViewModel(){}
+    func clear() {
+        chosenLanguage = "EN"
+        textForCrypt = ""
+        binaryTextForCrypt = ""
+//        keyForCrypt = ""
+        binaryKeyForCrypt = ""
+        resultIsReady = false
+        resultText = ""
+        resultBinarText = ""
+        uncryptIsReady = false
+        uncryptResultText = ""
+        uncryptResultBinarText = ""
+        error = ""
+        uncError = ""
+    }
     
+    func newKey() {
+        var me = self.ciepher.stringToBinary(textForCrypt)
+        var me2 = me.components(separatedBy: " ")
+        self.binaryKeyForCrypt =  self.ciepher.randKey(me2.count)
+    }
+    
+    func tryCrypt() {
+        self.resultIsReady = false
+        if checkDataForCrypt() {
+            self.error = ""
+            (self.resultText, self.resultBinarText) = ciepher.firstMCrypt(textForCrypt,binaryKeyForCrypt)
+            self.resultIsReady = true
+        }
+    }
     
     func unCrypt(){
-        
+        self.uncryptIsReady = false
+        (self.uncryptResultText, self.uncryptResultBinarText) = ciepher.firstMUnCrypt(self.resultBinarText, binaryKeyForCrypt)
+        self.uncryptIsReady = true
     }
     
-    
-    func balanceZerosAndOnes() {
-        let lettersEN = "abcdefghijklmnopqrstuvwxyz"
-        let lettersRu = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
-        let chosenLetters = self.chosenLanguage == "EN" ? lettersEN : lettersRu
-
-        let randomString = String((0..<self.textForCrypt.count).map { _ in
-            let randomIndex = Int.random(in: 0..<chosenLetters.count)
-            let character = chosenLetters[chosenLetters.index(chosenLetters.startIndex, offsetBy: randomIndex)]
-            return character
-        })
-
-        self.keyForCrypt = String(randomString.shuffled())
-        toBinar()
-    }
-
     func toBinar(){
         self.binaryTextForCrypt = ciepher.stringToBinary(textForCrypt)
-        self.binaryKeyForCrypt = ciepher.stringToBinary(keyForCrypt)
+//        self.binaryKeyForCrypt = ciepher.stringToBinary(keyForCrypt)
     }
+    
+    private func checkDataForCrypt() -> Bool{
+        guard self.textForCrypt != "" else {
+            self.error = "Введите текст для шифрования"
+            return false
+        }
+        guard self.binaryKeyForCrypt != "" else {
+            self.error = "Забыли создать рандомный ключ"
+            return false
+        }
+        guard self.isTextInLanguage(self.textForCrypt, selectedLanguage: self.chosenLanguage) else {
+            self.error = "Язык выбран другой, в слове обнаружены буквы из другого алфавита"
+            return false
+        }
+        return true
+    }
+    
     private func isTextInLanguage(_ text: String, selectedLanguage: String) -> Bool {
         
         switch chosenLanguage {
