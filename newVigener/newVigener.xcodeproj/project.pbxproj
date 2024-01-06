@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		639DD7DD2B493EDC00053442 /* newVigenerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DD7DC2B493EDC00053442 /* newVigenerApp.swift */; };
+		639DD7DF2B493EDC00053442 /* TabView_chose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DD7DE2B493EDC00053442 /* TabView_chose.swift */; };
+		639DD7E12B493EDD00053442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639DD7E02B493EDD00053442 /* Assets.xcassets */; };
+		639DD7E42B493EDD00053442 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639DD7E32B493EDD00053442 /* Preview Assets.xcassets */; };
+		63E396FF2B49402000F983DC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E396FE2B49402000F983DC /* MainView.swift */; };
+		63E397032B49409E00F983DC /* CrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E397022B49409E00F983DC /* CrackView.swift */; };
+		63E397072B4940C700F983DC /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E397062B4940C700F983DC /* MainViewModel.swift */; };
+		63E397092B4942C500F983DC /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E397082B4942C500F983DC /* Models.swift */; };
+		63E3970B2B49626100F983DC /* CrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E3970A2B49626100F983DC /* CrackViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		639DD7D92B493EDC00053442 /* newVigener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newVigener.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		639DD7DC2B493EDC00053442 /* newVigenerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newVigenerApp.swift; sourceTree = "<group>"; };
+		639DD7DE2B493EDC00053442 /* TabView_chose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView_chose.swift; sourceTree = "<group>"; };
+		639DD7E02B493EDD00053442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		639DD7E32B493EDD00053442 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		63E396FE2B49402000F983DC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		63E397022B49409E00F983DC /* CrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrackView.swift; sourceTree = "<group>"; };
+		63E397062B4940C700F983DC /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		63E397082B4942C500F983DC /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		63E3970A2B49626100F983DC /* CrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrackViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		639DD7D62B493EDC00053442 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		639DD7D02B493EDC00053442 = {
+			isa = PBXGroup;
+			children = (
+				639DD7DB2B493EDC00053442 /* newVigener */,
+				639DD7DA2B493EDC00053442 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		639DD7DA2B493EDC00053442 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				639DD7D92B493EDC00053442 /* newVigener.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		639DD7DB2B493EDC00053442 /* newVigener */ = {
+			isa = PBXGroup;
+			children = (
+				639DD7DC2B493EDC00053442 /* newVigenerApp.swift */,
+				639DD7DE2B493EDC00053442 /* TabView_chose.swift */,
+				63E397082B4942C500F983DC /* Models.swift */,
+				63E397012B49408300F983DC /* Crack */,
+				63E397002B49407B00F983DC /* Main */,
+				639DD7E02B493EDD00053442 /* Assets.xcassets */,
+				639DD7E22B493EDD00053442 /* Preview Content */,
+			);
+			path = newVigener;
+			sourceTree = "<group>";
+		};
+		639DD7E22B493EDD00053442 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				639DD7E32B493EDD00053442 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		63E397002B49407B00F983DC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				63E396FE2B49402000F983DC /* MainView.swift */,
+				63E397062B4940C700F983DC /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		63E397012B49408300F983DC /* Crack */ = {
+			isa = PBXGroup;
+			children = (
+				63E397022B49409E00F983DC /* CrackView.swift */,
+				63E3970A2B49626100F983DC /* CrackViewModel.swift */,
+			);
+			path = Crack;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		639DD7D82B493EDC00053442 /* newVigener */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 639DD7E72B493EDD00053442 /* Build configuration list for PBXNativeTarget "newVigener" */;
+			buildPhases = (
+				639DD7D52B493EDC00053442 /* Sources */,
+				639DD7D62B493EDC00053442 /* Frameworks */,
+				639DD7D72B493EDC00053442 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = newVigener;
+			productName = newVigener;
+			productReference = 639DD7D92B493EDC00053442 /* newVigener.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		639DD7D12B493EDC00053442 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					639DD7D82B493EDC00053442 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 639DD7D42B493EDC00053442 /* Build configuration list for PBXProject "newVigener" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 639DD7D02B493EDC00053442;
+			productRefGroup = 639DD7DA2B493EDC00053442 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				639DD7D82B493EDC00053442 /* newVigener */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		639DD7D72B493EDC00053442 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639DD7E42B493EDD00053442 /* Preview Assets.xcassets in Resources */,
+				639DD7E12B493EDD00053442 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		639DD7D52B493EDC00053442 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E397072B4940C700F983DC /* MainViewModel.swift in Sources */,
+				639DD7DF2B493EDC00053442 /* TabView_chose.swift in Sources */,
+				63E3970B2B49626100F983DC /* CrackViewModel.swift in Sources */,
+				63E397032B49409E00F983DC /* CrackView.swift in Sources */,
+				63E397092B4942C500F983DC /* Models.swift in Sources */,
+				639DD7DD2B493EDC00053442 /* newVigenerApp.swift in Sources */,
+				63E396FF2B49402000F983DC /* MainView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		639DD7E52B493EDD00053442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		639DD7E62B493EDD00053442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		639DD7E82B493EDD00053442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"newVigener/Preview Content\"";
+				DEVELOPMENT_TEAM = 944K4M9L9M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kpfu.newVigener;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		639DD7E92B493EDD00053442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"newVigener/Preview Content\"";
+				DEVELOPMENT_TEAM = 944K4M9L9M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kpfu.newVigener;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		639DD7D42B493EDC00053442 /* Build configuration list for PBXProject "newVigener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639DD7E52B493EDD00053442 /* Debug */,
+				639DD7E62B493EDD00053442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		639DD7E72B493EDD00053442 /* Build configuration list for PBXNativeTarget "newVigener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639DD7E82B493EDD00053442 /* Debug */,
+				639DD7E92B493EDD00053442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 639DD7D12B493EDC00053442 /* Project object */;
+}
