@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6360B7132B49D7D100C3DE61 /* Ciepher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6360B7122B49D7D100C3DE61 /* Ciepher.swift */; };
 		639DD7DD2B493EDC00053442 /* newVigenerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DD7DC2B493EDC00053442 /* newVigenerApp.swift */; };
 		639DD7DF2B493EDC00053442 /* TabView_chose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DD7DE2B493EDC00053442 /* TabView_chose.swift */; };
 		639DD7E12B493EDD00053442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639DD7E02B493EDD00053442 /* Assets.xcassets */; };
@@ -16,9 +17,11 @@
 		63E397072B4940C700F983DC /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E397062B4940C700F983DC /* MainViewModel.swift */; };
 		63E397092B4942C500F983DC /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E397082B4942C500F983DC /* Models.swift */; };
 		63E3970B2B49626100F983DC /* CrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E3970A2B49626100F983DC /* CrackViewModel.swift */; };
+		63FB3A562B49985A007D46C2 /* LoadTxtFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FB3A552B49985A007D46C2 /* LoadTxtFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6360B7122B49D7D100C3DE61 /* Ciepher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ciepher.swift; sourceTree = "<group>"; };
 		639DD7D92B493EDC00053442 /* newVigener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newVigener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639DD7DC2B493EDC00053442 /* newVigenerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newVigenerApp.swift; sourceTree = "<group>"; };
 		639DD7DE2B493EDC00053442 /* TabView_chose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView_chose.swift; sourceTree = "<group>"; };
@@ -29,6 +32,7 @@
 		63E397062B4940C700F983DC /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		63E397082B4942C500F983DC /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		63E3970A2B49626100F983DC /* CrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrackViewModel.swift; sourceTree = "<group>"; };
+		63FB3A552B49985A007D46C2 /* LoadTxtFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadTxtFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 				639DD7DC2B493EDC00053442 /* newVigenerApp.swift */,
 				639DD7DE2B493EDC00053442 /* TabView_chose.swift */,
 				63E397082B4942C500F983DC /* Models.swift */,
+				63FB3A542B499845007D46C2 /* Helpers */,
 				63E397012B49408300F983DC /* Crack */,
 				63E397002B49407B00F983DC /* Main */,
 				639DD7E02B493EDD00053442 /* Assets.xcassets */,
@@ -96,6 +101,15 @@
 				63E3970A2B49626100F983DC /* CrackViewModel.swift */,
 			);
 			path = Crack;
+			sourceTree = "<group>";
+		};
+		63FB3A542B499845007D46C2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				63FB3A552B49985A007D46C2 /* LoadTxtFile.swift */,
+				6360B7122B49D7D100C3DE61 /* Ciepher.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +186,8 @@
 				639DD7DF2B493EDC00053442 /* TabView_chose.swift in Sources */,
 				63E3970B2B49626100F983DC /* CrackViewModel.swift in Sources */,
 				63E397032B49409E00F983DC /* CrackView.swift in Sources */,
+				6360B7132B49D7D100C3DE61 /* Ciepher.swift in Sources */,
+				63FB3A562B49985A007D46C2 /* LoadTxtFile.swift in Sources */,
 				63E397092B4942C500F983DC /* Models.swift in Sources */,
 				639DD7DD2B493EDC00053442 /* newVigenerApp.swift in Sources */,
 				63E396FF2B49402000F983DC /* MainView.swift in Sources */,

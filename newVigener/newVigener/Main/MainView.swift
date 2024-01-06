@@ -24,7 +24,7 @@ struct MainView: View {
                         .padding(.top, 10)
                         .padding(.leading, 16)
                     TextField("Текст для шифрования", text: self.$viewModel.textForCrypt, axis: .vertical)
-                        .lineLimit(4)
+                        .lineLimit(6)
                         .padding()
                         .overlay {
                             RoundedRectangle(cornerRadius: 8).stroke(lineWidth: 2)
@@ -39,7 +39,7 @@ struct MainView: View {
                         .padding(.leading, 16)
                         .padding(.top, 10)
                     TextField("Ключ", text: self.$viewModel.keyForCrypt, axis: .vertical)
-                        .lineLimit(4)
+                        .lineLimit(6)
                         .padding()
                         .overlay {
                             RoundedRectangle(cornerRadius: 8).stroke(lineWidth: 2)
@@ -58,11 +58,7 @@ struct MainView: View {
                             }label: {
                                 Text("Сохранить в файл")
                             }
-                            Button {
-                                
-                            }label: {
-                                Text("Выбрать файл")
-                            }
+                            LoadTxtFile(result: self.$viewModel.textForCrypt)
                         }
                         .lineLimit(1)
                         .padding(.all, 10)
@@ -82,7 +78,7 @@ struct MainView: View {
                                 Text("Ctrl+C (CryptText)")
                             }
                             Button {
-                                
+                                self.viewModel.startCrypt()
                             }label: {
                                 Text("Зашифровать")
                             }
@@ -108,7 +104,7 @@ struct MainView: View {
                                     .foregroundStyle(.red)
                             }
                             Button {
-                                
+                                self.viewModel.startUncrypt()
                             }label: {
                                 Text("Расшифровать")
                             }
@@ -159,6 +155,9 @@ struct MainView: View {
                 }
                 .padding(.horizontal, 16)
                 
+                Group {
+//                    ProgressView()
+                }
             }
         }
     }
