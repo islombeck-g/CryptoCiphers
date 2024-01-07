@@ -7,12 +7,8 @@ struct LoadTxtFile: View {
     @State private var fileName = "no file chosen"
     
     var body: some View {
-        Button(action: { self.openFile.toggle() }) {
+        Button { self.openFile.toggle() } label: {
             Text("Выбрать файл")
-                .foregroundColor(.black)
-                .padding(.all, 8)
-                .background(Color("gray"))
-                .cornerRadius(4)
         }
         .fileImporter(isPresented: $openFile, allowedContentTypes: [.text], allowsMultipleSelection: false) { result in
             do {

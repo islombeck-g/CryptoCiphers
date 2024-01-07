@@ -13,6 +13,7 @@ struct MainView: View {
                         Text(language.rawValue)
                     }
                 }
+                .disabled(self.viewModel.cryptResult != nil)
                 .pickerStyle(.segmented)
                 .padding(.horizontal)
                 .padding(.top)
@@ -24,6 +25,7 @@ struct MainView: View {
                         .padding(.top, 10)
                         .padding(.leading, 16)
                     TextField("Текст для шифрования", text: self.$viewModel.textForCrypt, axis: .vertical)
+                        .disabled(self.viewModel.cryptResult != nil)
                         .lineLimit(6)
                         .padding()
                         .overlay {
@@ -39,6 +41,7 @@ struct MainView: View {
                         .padding(.leading, 16)
                         .padding(.top, 10)
                     TextField("Ключ", text: self.$viewModel.keyForCrypt, axis: .vertical)
+                        .disabled(self.viewModel.cryptResult != nil)
                         .lineLimit(6)
                         .padding()
                         .overlay {
@@ -59,6 +62,7 @@ struct MainView: View {
                                 Text("Сохранить в файл")
                             }
                             LoadTxtFile(result: self.$viewModel.textForCrypt)
+                                .disabled(self.viewModel.cryptResult != nil)
                         }
                         .lineLimit(1)
                         .padding(.all, 10)
@@ -108,6 +112,7 @@ struct MainView: View {
                             }label: {
                                 Text("Расшифровать")
                             }
+                            .disabled(self.viewModel.cryptResult == nil)
                         }
                         .lineLimit(1)
                         .padding(.all, 10)

@@ -22,7 +22,11 @@ class MainViewModel:Ciepher, ObservableObject {
         self.unCryptResult = nil
         guard check() else { self.isLoading = false; return }
         
-        self.cryptResult = self.cryptEN(constantText: textForCrypt, constantKey: keyForCrypt)
+        if chosenLanguage == .english {
+            self.cryptResult = self.cryptEN(constantText: textForCrypt, constantKey: keyForCrypt)
+        } else {
+            self.cryptResult = self.cryptRu(constantText: textForCrypt, constantKey: keyForCrypt)
+        }
         
         self.isLoading = false
     }
@@ -32,8 +36,11 @@ class MainViewModel:Ciepher, ObservableObject {
         self.errorInCrypt = nil
         self.errorInUncrypt = nil
         
-        self.unCryptResult = unCryptEN(constantText: cryptResult!, constantKey: keyForCrypt)
-        
+        if chosenLanguage == .english {
+            self.unCryptResult = unCryptEN(constantText: cryptResult!, constantKey: keyForCrypt)
+        } else {
+            self.unCryptResult = unCryptRU(constantText: cryptResult!, constantKey: keyForCrypt)
+        }
         self.isLoading = false
     }
     
