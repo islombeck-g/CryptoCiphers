@@ -2,7 +2,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    @EnvironmentObject private var viewModel:MainViewModel
+    @EnvironmentObject private var viewModel:ViewModel
     
     var body: some View {
         VStack {
@@ -77,9 +77,12 @@ struct MainView: View {
                     HStack {
                         Group {
                             Button {
-                                UIPasteboard.general.string = viewModel.cryptResult
+//                                UIPasteboard.general.string = viewModel.cryptResult
+                                self.viewModel.textForCrypt = self.viewModel.clearText(viewModel.textForCrypt)
+                                self.viewModel.keyForCrypt = self.viewModel.clearText(viewModel.keyForCrypt)
                             }label: {
-                                Text("Ctrl+C (CryptText)")
+//                                Text("Ctrl+C (CryptText)")
+                                Text("Clear")
                             }
                             Button {
                                 self.viewModel.startCrypt()
@@ -170,5 +173,5 @@ struct MainView: View {
 
 #Preview {
     MainView()
-        .environmentObject(MainViewModel())
+        .environmentObject(ViewModel())
 }

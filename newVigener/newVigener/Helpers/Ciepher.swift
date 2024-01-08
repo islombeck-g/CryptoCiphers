@@ -1,107 +1,62 @@
 import Foundation
 
 class Ciepher {
-    func cryptEN(constantText: String, constantKey: String) -> String {
+    func encryptText(_ ConstText:String, _ ConstKey:String, chosenLanguage: Languages) ->String {
+        
+        
+        
+        let newKey = Array(getRepeatedKey(ConstText.count, ConstKey))
+        
+        let alphabet = chosenLanguage == .english ? englishLanguage + numbers : russianLanguage + numbers
+        
+        let arrayOfText = Array(ConstText)
+        
         var result = ""
-        let arrayOfText = Array(constantText)
-        var arrayOfKey: [Character] = []
-        
-        while arrayOfText.count > arrayOfKey.count {
-            arrayOfKey += Array(constantKey)
-        }
-        
-        let alphabet = englishLanguage + numbers + " "
         
         for i in arrayOfText.indices {
-            guard let indexF = alphabet.firstIndex(of: arrayOfText[i]) else { result.append(arrayOfText[i]);continue }
-            let indexS = alphabet.firstIndex(of: arrayOfKey[i])!
+            
+            guard let indexF = alphabet.firstIndex(of: arrayOfText[i]) else {
+                result.append(arrayOfText[i]); continue }
+            
+            let indexS = alphabet.firstIndex(of: newKey[i])!
             
             var number = indexS + indexF
-            if number >= 63 {
-                number = number - 63
+            if number >= alphabet.count {
+                number = number - alphabet.count
             }
-            print("\(arrayOfText[i]) _ \(number)")
             result.append(alphabet[number])
         }
-        
         return result
     }
-    func unCryptEN(constantText: String, constantKey:String) -> String {
+    func decrypt(_ ConstText:String, _ ConstKey:String, chosenLanguage: Languages) -> String {
+        let alphabet = chosenLanguage == .english ? englishLanguage + numbers : russianLanguage + numbers
         var result = ""
-        let arrayOfText = Array(constantText)
-        var arrayOfKey: [Character] = []
+        let arrayOfText = Array(ConstText)
         
-        while arrayOfText.count > arrayOfKey.count {
-            arrayOfKey += Array(constantKey)
-        }
+        let newKey = Array(getRepeatedKey(ConstText.count, ConstKey))
         
-        let alphabet = englishLanguage + numbers + " "
         
         for i in arrayOfText.indices {
-            guard let indexF = alphabet.firstIndex(of: arrayOfText[i]) else { result.append(arrayOfText[i]);continue }
-            let indexS = alphabet.firstIndex(of: arrayOfKey[i])!
+            guard let indexF = alphabet.firstIndex(of: arrayOfText[i]) else {
+                result.append(arrayOfText[i]); continue }
+            let indexS = alphabet.firstIndex(of: newKey[i])!
             
             var number = indexF - indexS
             if number < 0 {
-                number = 63 + number
+                number = alphabet.count + number
             }
             result.append(alphabet[number])
         }
         
         return result
-        
     }
-    
-    
-    func cryptRu(constantText: String, constantKey: String) ->String {
-        var result = ""
-        let arrayOfText = Array(constantText)
-        var arrayOfKey: [Character] = []
-        
-        while arrayOfText.count > arrayOfKey.count {
-            arrayOfKey += Array(constantKey)
+    private func getRepeatedKey(_ textSize:Int, _ key:String) -> String {
+        if textSize <= key.count {
+            return key
         }
-        
-        let alphabet = russianLanguage + numbers + " "
-        
-        for i in arrayOfText.indices {
-            guard let indexF = alphabet.firstIndex(of: arrayOfText[i]) else { result.append(arrayOfText[i]);continue }
-            let indexS = alphabet.firstIndex(of: arrayOfKey[i])!
-            
-            var number = indexS + indexF
-            if number >= 77 {
-                number = number - 77
-            }
-            print("\(arrayOfText[i]) _ \(number)")
-            result.append(alphabet[number])
-        }
-        
-        return result
+        let reminder = textSize % key.count
+        let count = textSize / key.count
+        let newKey = String(repeating: key, count: count) + key.prefix(reminder)
+        return newKey
     }
-    func unCryptRU(constantText: String, constantKey:String) -> String {
-        var result = ""
-        let arrayOfText = Array(constantText)
-        var arrayOfKey: [Character] = []
-        
-        while arrayOfText.count > arrayOfKey.count {
-            arrayOfKey += Array(constantKey)
-        }
-        
-        let alphabet = russianLanguage + numbers + " "
-        
-        for i in arrayOfText.indices {
-            guard let indexF = alphabet.firstIndex(of: arrayOfText[i]) else { result.append(arrayOfText[i]);continue }
-            let indexS = alphabet.firstIndex(of: arrayOfKey[i])!
-            
-            var number = indexF - indexS
-            if number < 0 {
-                number = 77 + number
-            }
-            result.append(alphabet[number])
-        }
-        
-        return result
-        
-    }
-    
 }

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct TabView_chose: View {
     
-    @StateObject var mainViewModel:MainViewModel = MainViewModel()
+    @StateObject var mainViewModel:ViewModel = ViewModel()
     @StateObject var crackViewModel:CrackViewModel = CrackViewModel()
     var body: some View {
         TabView {

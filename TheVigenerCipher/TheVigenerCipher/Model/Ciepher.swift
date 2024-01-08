@@ -101,9 +101,9 @@ class Ciepher:VigenereCrack {
         var keyLength:Int = 0
         
         for n in 1..<constant_text.count {
-            
+//            разделёная строка по n элемент
             var me = self.findN_function(&text, n)
-            
+//            
             compare.append(self.countForNumber(&me))
             
             if compare.last! > enNumber {
