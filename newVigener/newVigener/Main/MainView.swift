@@ -3,11 +3,12 @@ import SwiftUI
 struct MainView: View {
     
     @EnvironmentObject private var viewModel:ViewModel
+    @FocusState private var isTyping:Bool
     
     var body: some View {
-        VStack {
+        NavigationStack {
             ScrollView {
-//               MARK: chose alphabet
+                //               MARK: chose alphabet
                 Picker("SelectLanguage", selection: self.$viewModel.chosenLanguage) {
                     ForEach(Languages.allCases, id: \.self) { language in
                         Text(language.rawValue)
@@ -18,13 +19,15 @@ struct MainView: View {
                 .padding(.horizontal)
                 .padding(.top)
                 
-//                MARK: textForCrypt
+                //                MARK: textForCrypt
                 Group {
                     Text("Текст для шифрования:")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.top, 10)
                         .padding(.leading, 16)
+                    
                     TextField("Текст для шифрования", text: self.$viewModel.textForCrypt, axis: .vertical)
+                        .focused($isTyping)
                         .disabled(self.viewModel.cryptResult != nil)
                         .lineLimit(6)
                         .padding()
@@ -34,13 +37,14 @@ struct MainView: View {
                         .padding(.horizontal, 16)
                 }
                 
-//                MARK: keyForCrypt
+                //                MARK: keyForCrypt
                 Group {
                     Text("Ключ:")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 16)
                         .padding(.top, 10)
                     TextField("Ключ", text: self.$viewModel.keyForCrypt, axis: .vertical)
+                        .focused($isTyping)
                         .disabled(self.viewModel.cryptResult != nil)
                         .lineLimit(6)
                         .padding()
@@ -52,15 +56,13 @@ struct MainView: View {
                     
                 }
                 
-//                MARK: buttons
+                //                MARK: buttons
                 Group {
                     HStack {
                         Group {
-                            Button {
-                                
-                            }label: {
-                                Text("Сохранить в файл")
-                            }
+                            SaveToTxtFile(text: self.$viewModel.cryptResult)
+                                .disabled(self.viewModel.cryptResult == nil)
+                            
                             LoadTxtFile(result: self.$viewModel.textForCrypt)
                                 .disabled(self.viewModel.cryptResult != nil)
                         }
@@ -77,11 +79,9 @@ struct MainView: View {
                     HStack {
                         Group {
                             Button {
-//                                UIPasteboard.general.string = viewModel.cryptResult
                                 self.viewModel.textForCrypt = self.viewModel.clearText(viewModel.textForCrypt)
                                 self.viewModel.keyForCrypt = self.viewModel.clearText(viewModel.keyForCrypt)
                             }label: {
-//                                Text("Ctrl+C (CryptText)")
                                 Text("Clear")
                             }
                             Button {
@@ -129,8 +129,8 @@ struct MainView: View {
                     
                     
                 }
-
-//                MARK: errors
+                
+                //                MARK: errors
                 Group {
                     if let error = self.viewModel.errorInCrypt {
                         Text("Ошибка в шифровании: \(error)")
@@ -146,15 +146,14 @@ struct MainView: View {
                 .foregroundStyle(.red)
                 .bold()
                 
-//                MARK: results
+                //                MARK: results
                 Group {
                     if let text = self.viewModel.cryptResult {
                         Text(text)
-                            
+                        
                     }
                     if let text = self.viewModel.unCryptResult {
-                        Text(text)
-                          
+                        Text(text)    
                     }
                 }
                 .padding()
@@ -162,15 +161,27 @@ struct MainView: View {
                     RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 3)
                 }
                 .padding(.horizontal, 16)
+            }
+            .toolbar {
                 
-                Group {
-//                    ProgressView()
+                ToolbarItem(placement: .keyboard) {
+                    if isTyping {
+                        HStack {
+                            Spacer()
+                            Button("Готово") {
+                                
+                                    isTyping = false
+                                
+                            }
+                            Spacer()
+                                .frame(width: 16)
+                        }
+                    }
                 }
             }
         }
     }
 }
-
 #Preview {
     MainView()
         .environmentObject(ViewModel())

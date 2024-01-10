@@ -3,7 +3,6 @@ import SwiftUI
 struct TabView_chose: View {
     
     @StateObject var mainViewModel:ViewModel = ViewModel()
-    @StateObject var crackViewModel:CrackViewModel = CrackViewModel()
     var body: some View {
         TabView {
             
@@ -11,7 +10,7 @@ struct TabView_chose: View {
                 .environmentObject(self.mainViewModel)
                 .tabItem { Image(systemName: "1.circle") }
             CrackView()
-                .environmentObject(self.crackViewModel)
+                .environmentObject(self.mainViewModel)
                 .tabItem { Image(systemName: "2.circle") }
         }
     }

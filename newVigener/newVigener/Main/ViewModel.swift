@@ -18,7 +18,7 @@ class ViewModel:Ciepher, ObservableObject {
         var res = ""
         
         for i in text {
-            var character = i.lowercased()
+            let character = i.lowercased()
             
             if englishLanguage.contains(character) || russianLanguage.contains(character) || numbers.contains(character) {
                 res.append(character)
@@ -33,7 +33,6 @@ class ViewModel:Ciepher, ObservableObject {
         self.errorInUncrypt = nil
         self.cryptResult = nil
         self.unCryptResult = nil
-        
         
         guard check(textForCrypt, keyForCrypt) else { self.isLoading = false; return }
         
@@ -51,7 +50,6 @@ class ViewModel:Ciepher, ObservableObject {
         
         self.isLoading = false
     }
-    
     
     //    isReady
     func ClearAll() {
@@ -102,6 +100,62 @@ class ViewModel:Ciepher, ObservableObject {
         guard errorText else { self.errorInCrypt = "В тексте для шифрования ошибка"; return false }
         guard errorKey else { self.errorInCrypt = "В ключе для шифрования ошибка"; return false }
         
+        return true
+    }
+    
+//    CrackPart
+    @Published var textforUncrypt:String = ""
+    @Published var resultOFCrack:String = ""
+    @Published var resultKey:String = ""
+    @Published var startHack:Bool = false
+    @Published var hackError:String?
+    @Published var chosenLanguageForHack:Languages = .english
+    
+    func clearCryptView() {
+        textforUncrypt = ""
+        resultOFCrack = ""
+        resultKey = ""
+    }
+    
+    func tryHack() {
+        startHack = true
+        hackError = nil
+        
+        if checkForHack() {
+            print("me")
+            (resultOFCrack, resultKey) = hack1(cryptResult!, me: unCryptResult!, chosenLanguage: self.chosenLanguageForHack)
+        }
+        
+        startHack = false
+    }
+    
+    func checkForHack() ->Bool {
+        
+        let alphabet = self.chosenLanguageForHack == .english ? englishLanguage + numbers: russianLanguage + numbers
+        
+        for i in textforUncrypt {
+            if !alphabet.contains(i) {
+                hackError = "Присутствуют неопознанные символы"
+                return false
+            }
+        }
+        
+        var whichLanguage:Languages = .english
+        
+        if unCryptResult == nil {
+            hackError = "что то не так("
+            return false
+        } else {
+            for i in unCryptResult! {
+                if numbers.contains(i) {continue}
+                if englishLanguage.contains(i) {whichLanguage = .english}
+                if russianLanguage.contains(i) {whichLanguage = .russian}
+            }
+            if whichLanguage != chosenLanguageForHack {
+                hackError = "что то не так1("
+                return false
+            }
+        }
         return true
     }
 }
